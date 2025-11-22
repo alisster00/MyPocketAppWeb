@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Usuario Demo",
+      "email": "demo@test.com",
+      "password": "demo123"
+    },
+    {
+      "id": "2",
+      "name": "Omar",
+      "email": "omar@test.com",
+      "password": "omar123"
+    },
+    {
+      "id": "26f7",
+      "name": "Pedro Nel",
+      "email": "omard@test.com",
+      "password": "solar1"
+    }
+  ],
+  "accounts": [],
+  "transactions": []
+}
