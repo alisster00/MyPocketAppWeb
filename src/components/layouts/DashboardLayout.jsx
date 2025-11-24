@@ -10,8 +10,10 @@ import {
   DollarSign,
   Bell,
   Menu,
-  X
+  X,
+  User
 } from 'lucide-react';
+import { getInitial } from '../../utils/ExtractorIniciales';
 
 export const DashboardLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -41,7 +43,7 @@ export const DashboardLayout = () => {
           <div className="bg-indigo-600 text-white p-2 rounded-lg">
             <DollarSign size={20} />
           </div>
-          <span className="text-xl font-bold text-slate-800">FinanzaPro</span>
+          <span className="text-xl font-bold text-slate-800">MyPocket</span>
         </div>
         
         <nav className="flex-1 px-4 py-4 space-y-1">
@@ -85,11 +87,11 @@ export const DashboardLayout = () => {
             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-slate-600">
               {isMobileMenuOpen ? <X /> : <Menu />}
             </button>
-            <span className="font-bold text-slate-800">FinanzaPro</span>
+            <span className="font-bold text-slate-800">MyPocket</span>
           </div>
           
           <div className="hidden md:block">
-            <h2 className="text-xl font-semibold text-slate-800">Hola, Andrés 👋</h2>
+            <h2 className="text-xl font-semibold text-slate-800">Hola, {localStorage.getItem('name')}👋</h2>
             <p className="text-sm text-slate-500">Aquí tienes el resumen financiero de hoy.</p>
           </div>
 
@@ -99,7 +101,7 @@ export const DashboardLayout = () => {
               <span className="absolute top-2 right-2 w-2 h-2 bg-rose-500 rounded-full border-2 border-white"></span>
             </button>
             <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-bold border-2 border-white shadow-sm">
-              A
+              {getInitial(localStorage.getItem('name'))}
             </div>
           </div>
         </header>
