@@ -5,6 +5,7 @@ import { DollarSign, TrendingUp, AlertCircle, CheckCircle, Loader } from 'lucide
 import { authService } from "../../services/authService";
 import { Modal } from "../../components/ui/Modal";
 
+
 export const LoginPage = () => {
   const navigate = useNavigate();
 
@@ -69,6 +70,7 @@ export const LoginPage = () => {
     if (result.success) {
       localStorage.setItem('token', 'true');
       localStorage.setItem('user', JSON.stringify(result.user));
+      localStorage.setItem('name', result.user.name);
       setTimeout(() => {
 
         setModalState({
