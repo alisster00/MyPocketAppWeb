@@ -32,7 +32,7 @@ MVP Mínimo: Permitir la creación de cuentas y transacciones.
 
 IDEA-003 [ESTADO: PENDIENTE 📅] FEATURE DISPONIBLE 🟢:
 Fecha: 2025-11-18
-Categoría: 
-Idea: 
-Necesidad: 
-MVP Mínimo: 
+Categoría: Configuración de la app
+Idea: Crear módulos para la administración de la cuenta del usuario.
+Necesidad: Tener un módulo para la administración de la cuenta del usuario.
+MVP Mínimo: Permitir la modificacion de los datos, personalización de la app y la eliminación de la cuenta.
