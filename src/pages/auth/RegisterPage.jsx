@@ -4,9 +4,10 @@ import { Button } from '../../components/ui/Button';
 import { UserPlus, Loader } from 'lucide-react';
 import { authService } from '../../services/authService';
 import Swal from 'sweetalert2';
-
+import { useDocumentTitle } from "../../hooks/useRoute";
 
 export const RegisterPage = () => {
+    useDocumentTitle("Crear cuenta - MyPocket")
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -91,7 +92,7 @@ export const RegisterPage = () => {
                 <img
                     src="public\Background.png"
                     alt="Background Register"
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover object-left"
                     onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; e.target.parentElement.style.backgroundColor = '#1e3a8a'; }}
                 />
                 <div className="absolute inset-0 bg-indigo-900/60 mix-blend-multiply"></div>

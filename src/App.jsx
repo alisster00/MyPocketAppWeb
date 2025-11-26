@@ -4,6 +4,7 @@ import { LoginPage } from './pages/auth/LoginPage';
 import { RegisterPage } from './pages/auth/RegisterPage';
 import { DashboardLayout } from './components/layouts/DashboardLayout';
 import { DashboardHome } from './pages/dashboard/Home';
+import { NotFound } from './pages/NotFound';
 
 // Componente para proteger rutas (Si no hay login, te manda fuera)
 const ProtectedRoute = ({ children }) => {
@@ -16,7 +17,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* Rutas Públicas */}
+        <Route path="/" element={<Navigate to="/login" />} />
         <Route path="/login" element={<LoginPage />} />
+
         <Route path="/register" element={<RegisterPage />} />
 
         {/* Rutas Privadas (Dashboard) */}
@@ -32,12 +35,11 @@ function App() {
         </Route>
 
 
-        {/* Redirección por defecto */}
-        <Route path="*" element={<Navigate to="/login" />} />
+        {/* Redirección por defecto: página 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
     );
 }
-
 
 export default App;

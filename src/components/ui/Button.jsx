@@ -1,4 +1,9 @@
-export const Button = ({ children }, variant = 'primary', onClick, className = "") => {
+export const Button = ({
+  children, 
+  variant = 'primary',
+  onClick, 
+  className = ""
+}) => {
     const baseStyle = "px-4 py-3 rounded-xl font-medium transition-all duration-200 flex items-center justify-center gap-2";
 
     const variantes = {
@@ -8,12 +13,11 @@ export const Button = ({ children }, variant = 'primary', onClick, className = "
     };
 
     return (
-        <button 
-      onClick={onClick} 
-      className={`${baseStyle} ${variantes[variant]} ${className}`}
-    >
-      {children}
-    </button>
+      <button 
+        onClick={onClick} 
+        className={`${baseStyle} ${variantes[variant]} ${className}`}
+      >
+        {children}
+      </button>
     );
-
-}
+};

@@ -91,8 +91,9 @@ export const DashboardHome = () => {
                   <Wallet size={20} />
                 </div>
              </div>
-             <Button className="w-full bg-white text-slate-900 hover:bg-slate-100 shadow-none font-bold">
-               Nueva Transacción
+             <Button
+              className="w-full mt-6">
+              Nueva Transacción
              </Button>
           </Card>
 

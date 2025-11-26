@@ -5,8 +5,11 @@ import { Loader } from 'lucide-react';
 import { authService } from "../../services/authService";
 import Swal from 'sweetalert2';
 
+import { useDocumentTitle } from "../../hooks/useRoute";
+
 
 export const LoginPage = () => {
+  useDocumentTitle("Iniciar Sesión - MyPocket")
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -72,7 +75,7 @@ export const LoginPage = () => {
         <img
           src="public/Background.png"
           alt="Background"
-          className="absolute inset-0 w-full h-full object-fit"
+          className="absolute inset-0 w-full h-full object-cover object-left"
           // Fallback para entornos donde la imagen no carga
           onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; e.target.parentElement.style.backgroundColor = '#1e3a8a'; }}
         />
@@ -87,7 +90,9 @@ export const LoginPage = () => {
       {/* DERECHA: Formulario */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-slate-50">
         <div className="w-full max-w-md bg-white p-10 rounded-3xl shadow-xl border border-slate-100">
-          <h2 className="text-3xl font-bold text-slate-900">Bienvenido</h2>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-slate-900">Bienvenido</h2>
+          </div>
 
           <form onSubmit={handleLogin} className="space-y-6 mt-8">
             {/* Input Correo */}
