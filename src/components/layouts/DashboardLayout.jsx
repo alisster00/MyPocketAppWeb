@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard,
@@ -11,10 +11,12 @@ import {
   Bell,
   Menu,
   X,
-  User
+  User,
+  Info
 } from 'lucide-react';
 import { getInitial } from '../../utils/ExtractorIniciales';
 import Swal from 'sweetalert2';
+import { frasesRandom } from '../../utils/FrasesRandom';
 
 const DashboardLayout = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,7 +41,16 @@ const DashboardLayout = () => {
     { icon: ArrowRightLeft, label: 'Transacciones', path: '/dashboard/transactions' },
     { icon: Wallet, label: 'Cuentas', path: '/dashboard/accounts' },
     { icon: PieChart, label: 'Análisis', path: '/dashboard/analytics' },
+    //{ icon: Settings, label: 'Configuración', path: '/dashboard/settings' },
+    {icon: Info, label: 'Acerca de', path: '/dashboard/about'}
   ];
+
+  const [frase, setFrase] = useState({});
+
+  useEffect(() => {
+    const randomFrase = frasesRandom();
+    setFrase(randomFrase);
+  }, []);
 
   return (
     <div className="min-h-screen bg-slate-50 flex font-sans text-slate-900">
@@ -94,7 +105,7 @@ const DashboardLayout = () => {
 
           <div className="hidden md:block">
             <h2 className="text-xl font-semibold text-slate-800">Hola, {localStorage.getItem('name')}👋</h2>
-            <p className="text-sm text-slate-500">Aquí tienes el resumen financiero de hoy.</p>
+            <p>{frase.frase}</p>
           </div>
 
           <div className="flex items-center gap-4">

@@ -7,6 +7,7 @@ import { DashboardHome } from "../pages/dashboard/Home";
 import { AccountsPage } from "../pages/dashboard/AccountsPage";
 import { TransactionsPage } from "../pages/dashboard/TransactionsPage";
 import { AnalyticsPage } from "../pages/dashboard/AnaliticsPage";
+import { About } from "../pages/informacion/About";
 
 export const routerApp = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ export const routerApp = createBrowserRouter([
             {
                 path: "analytics",
                 element: <AnalyticsPage />,
+            },
+            {
+                path: "about",
+                element: <About />,
             }
         ]
     },

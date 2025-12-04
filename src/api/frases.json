@@ -1,0 +1,39 @@
+{
+  "frases": [
+    {
+      "id": 1,
+      "phrase": "El presupuesto no consiste en limitar lo que se quiere, sino en dar prioridad a lo que se necesita.",
+      "author": "MyPocket App"
+    },
+    {
+      "id": 2,
+      "phrase": "Cada peso que ahorras hoy, es un peso que trabaja para ti mañana. ¡A gestionar!",
+      "author": "MyPocket App"
+    },
+    {
+      "id": 3,
+      "phrase": "No se trata de cuánto ganas, sino de cómo lo gastas. Hoy es un buen día para el control.",
+      "author": "Dave Ramsey"
+    },
+    {
+      "id": 4,
+      "phrase": "La riqueza es el resultado de tener un plan financiero sólido y seguirlo.",
+      "author": "Anónimo"
+    },
+    {
+      "id": 5,
+      "phrase": "Invierte en ti mismo; es la mejor inversión que puedes hacer.",
+      "author": "Warren Buffett"
+    },
+    {
+      "id": 6,
+      "phrase": "El éxito no es la ausencia de fracasos, sino la habilidad de continuar adelante después de los mismos.",
+      "author": "MyPocket App"
+    },
+    {
+      "id": 7,
+      "phrase": "Un gasto innecesario de hoy es la meta de ahorro que no alcanzaste mañana.",
+      "author": "MyPocket App"
+    }
+  ]
+}
