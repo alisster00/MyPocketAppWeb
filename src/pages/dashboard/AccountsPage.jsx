@@ -5,7 +5,7 @@ import { formatearMoneda } from '../../utils/FormateoValores';
 import { api } from '../../api/servicios';
 import Swal from 'sweetalert2';
 
-// Mapeo de iconos por nombre
+
 const iconMap = {
     'Landmark': Landmark,
     'CreditCard': CreditCard,
@@ -25,7 +25,7 @@ export const AccountsPage = () => {
         color: 'bg-blue-500'
     });
 
-    // Cargar cuentas al montar el componente
+
     useEffect(() => {
         loadAccounts();
     }, []);
@@ -66,11 +66,11 @@ export const AccountsPage = () => {
                 timer: 2000
             });
 
-            // Recargar cuentas y cerrar modal
+            
             loadAccounts();
             setShowModal(false);
 
-            // Resetear formulario
+         
             setNewAccount({
                 name: '',
                 type: 'Banco',

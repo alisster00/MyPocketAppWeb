@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import { Button } from "../../components/ui/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { Loader } from 'lucide-react';
 import { api } from "../../api/servicios";
 import Swal from 'sweetalert2';
 import { Toast } from "../../components/ui/Modal";
+import { frasesRandom } from "../../utils/FrasesRandom";
 
 export const LoginPage = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
+  const [frase, setFrase] = useState({});
+
+  useEffect(() => {
+    const randomFrase = frasesRandom();
+    setFrase(randomFrase);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
