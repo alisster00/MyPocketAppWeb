@@ -7,18 +7,6 @@
       "password": "demo123"
     },
     {
-      "id": "2",
-      "name": "Omar",
-      "email": "omar@test.com",
-      "password": "omar123"
-    },
-    {
-      "id": "26f7",
-      "name": "Pedro Nel",
-      "email": "omard@test.com",
-      "password": "solar1"
-    },
-    {
       "id": "b85c",
       "name": "Omar Salcedo",
       "email": "omar2@test.com",
@@ -30,7 +18,7 @@
       "id": "9adc",
       "name": "Billetera",
       "type": "Efectivo",
-      "balance": 24000,
+      "balance": 896000,
       "icon": "DollarSign",
       "color": "bg-rose-500"
     },
@@ -38,7 +26,7 @@
       "id": "1b0b",
       "name": "Nequi",
       "type": "Ahorros",
-      "balance": 1000000,
+      "balance": 1450000,
       "icon": "Landmark",
       "color": "bg-purple-500"
     },
@@ -46,10 +34,65 @@
       "id": "b728",
       "name": "Bancolombia",
       "type": "Banco",
-      "balance": 500000,
+      "balance": 0,
       "icon": "Landmark",
       "color": "bg-yellow-500"
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": "bab0",
+      "title": "Pago quincena",
+      "category": "Salario",
+      "amount": 1250000,
+      "type": "income",
+      "date": "2025-12-07T19:08:13.524Z",
+      "accountId": "1b0b"
+    },
+    {
+      "id": "aacf",
+      "title": "Pago de prestamo",
+      "category": "Pagos Varios",
+      "amount": 200000,
+      "type": "income",
+      "date": "2025-12-07T19:08:13.524Z",
+      "accountId": "1b0b"
+    },
+    {
+      "id": "accf",
+      "title": "Pago trabajo independiente",
+      "category": "Salario",
+      "amount": 1500000,
+      "type": "income",
+      "date": "2025-12-07T19:11:26.387Z",
+      "accountId": "9adc"
+    },
+    {
+      "id": "64b7",
+      "title": "VIaje Didi",
+      "category": "Transporte",
+      "amount": 25000,
+      "type": "expense",
+      "date": "2025-12-07T19:13:13.295Z",
+      "accountId": "9adc"
+    },
+    {
+      "id": "5cb8",
+      "title": "Papas y Pollo",
+      "category": "Alimentación",
+      "amount": 79000,
+      "type": "expense",
+      "date": "2025-12-07T19:13:38.624Z",
+      "accountId": "9adc"
+    },
+    {
+      "id": "3a34",
+      "title": "Pago mantenimiento",
+      "category": "Casa",
+      "amount": 500000,
+      "type": "expense",
+      "date": "2025-12-07T19:29:32.995Z",
+      "accountId": "9adc"
+    }
+  ]
 }

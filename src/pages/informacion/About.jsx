@@ -126,7 +126,7 @@ export const About = () => {
                     <Card className="bg-slate-900 text-white border-slate-800">
                         <div className="flex items-center gap-3 mb-6">
                             <Users className="text-indigo-400" />
-                            <h3 className="font-bold text-white">Créditos</h3>
+                            <h3 className="font-bold text-black">Créditos</h3>
                         </div>
                         <div className="space-y-4">
                             {contributors.map((contributor, idx) => (
